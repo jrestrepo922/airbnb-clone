@@ -20,12 +20,17 @@ function Banner() {
                 className="banner__searchButton">{showSearch ? "Hide": "Search Dates"}
                 </Button>
             </div> 
-            <div className="banner__info">
-                <h1>Get out and stretch your imagination</h1>
-                <h5>
-                    plan a different kind of getaway to uncover the hidden gmes near you. 
-                </h5>
-                <Button variant="outlined">Explore Nearby</Button>
+            <div className="banner__imgInfoContainer">
+                <div className="banner__info">
+                    <h1>Get out and stretch your imagination</h1>
+                    <h5>
+                        plan a different kind of getaway to uncover the hidden gems near you. 
+                    </h5>
+                    <Button variant="outlined">Explore Nearby</Button>
+                </div>
+                <div className="banner__imgContainer">
+                
+                </div>
             </div>
         </div>
     )
