@@ -6,12 +6,17 @@
     transition: transform 100ms ease-in;
     cursor: pointer;
   }
-  
-  .card:hover {
-    transform: scale(1.07);
+
+  .card > a{
+    text-decoration: none;
+    color: inherit;
   }
   
-  .card > img {
+  /* .card:hover {
+    transform: scale(1.07);
+  }
+   */
+  .card > a > img {
     object-fit: fill;
     min-width: 300px;
     min-height: 200px;
