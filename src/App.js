@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchPage from './SearchPage/SearchPage'; 
 
 
+
 function App() {
   return (
     //BEM

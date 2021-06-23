@@ -20,7 +20,10 @@ function Header() {
             </Link>
             <div className="header__center"> 
                 <input type="text"/>
-                <SearchIcon/>  
+                <Link to="/search">
+                    <SearchIcon/> 
+                </Link>
+                
             </div>
             
 

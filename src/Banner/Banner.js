@@ -8,11 +8,8 @@ import { useHistory } from 'react-router-dom';
 function Banner() {
     const history = useHistory(); 
     const [showSearch, setShowSearch] = useState(false); 
-    
 
     
-
-
     return (
         <div className="banner">
             <div className="banner__search">
