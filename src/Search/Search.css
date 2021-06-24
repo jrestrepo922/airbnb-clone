@@ -8,7 +8,7 @@
     height: 500px;
 }
 
-.search > h2 {
+.search form > h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     top: 380px; 
 }
 
-.search > input {
+.search form > input[type="number"] {
     width:  539px; 
     padding: 20px; 
     position: absolute; 
@@ -30,12 +30,12 @@
     border: none; 
 }
 
-.search > input:focus{
+.search form > input[type="number"]:focus{
     outline-width: 0;
 }
 
 
-.search > button{
+.search  form > input[type="submit"]{
     position: absolute;
     left: 0; 
     top: 480px; 
@@ -44,9 +44,12 @@
     color: white; 
     width: 579px;
     transition: .5s all;
+    border: none; 
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.search > button:hover {
+.search form > input[type="submit"]:hover {
     background-color: white;
     color: #ff7779; 
     transition: .5s all;

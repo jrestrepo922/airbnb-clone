@@ -2,14 +2,60 @@ import React from 'react';
 import './SearchPage.css'
 import { Button } from "@material-ui/core"
 import SearchResult from '../SearchResult/SearchResult';
+import hostMaker from '../Data';
+import { selectSearch } from '../Search/searchSlice'; 
+import { useSelector } from 'react-redux'; 
 
 function SearchPage() {
+    const data = hostMaker(); 
+    const {startDate, endDate } = useSelector(selectSearch);
+    const guests = parseInt(useSelector(selectSearch).guests);
+
+
+    function createSearchResults(){
+        let filterData = data.filter((result) => {
+            if(guests){
+                return result.guests === guests
+            } else {
+                return result.guests >= 0; 
+            }
+        }); 
+
+        
+        let searchResults = filterData.map(result => {
+            const {id, stayImages, location, title, guests, bedrooms, baths, beds, description, hostPic, stars, pricePerDay, superHost} = result; 
+            return (
+                <SearchResult
+                id={id}
+                stayImages={stayImages}
+                location={location}
+                title={title}
+                guests = {guests}
+                bedrooms = {bedrooms} 
+                baths = {baths}
+                beds = {beds}
+                description = {description}
+                hostPic = {hostPic}
+                stars = {stars}
+                pricePerDay = {pricePerDay}
+                superHost = {superHost}
+                />
+            )
+        }) 
+
+        return searchResults; 
+    }
+
+    const searchResults = createSearchResults(); 
+
+    
+    
     return (
         <div className="searchPage">
             <div className="searchPage__info">
-
-                <p>62 stays · 26 august to 30 august · 2 guest</p>
-                <h1>Stays nearby</h1>
+            
+                <p>{searchResults.length}+ stays {guests? `· ${startDate} to ${endDate} · ${guests} guest`: ``}</p>
+                <h1>Stays in Panama City Beach</h1>
                 <Button variant="outlined">Cancellation Flexibility</Button>
                 <Button variant="outlined">Type of place</Button>
                 <Button variant="outlined">Price</Button>

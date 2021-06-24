@@ -33,26 +33,29 @@ function Search() {
         // setEndDate(ranges.selection.endDate); 
     }
 
-    function handleInputNum(e){
-        dispatch(addGuest(e.target.value))
+    function handleSubmit(event){
+        event.preventDefault();
+        dispatch(addGuest(event.target.children[2].value))
+        history.push("/search")
     }
 
     return (
         <div className="search">
-            <DateRangePicker 
-            ranges={[selectionRange]} 
-            onChange={handleSelect}
-            />
-            <h2>
-                Number of guests
-                <PeopleIcon/>
-            </h2>
-            <input min={1}
-            defaultValue={1}
-            max={3}
-            onChange={handleInputNum}
-            type="number"/>
-            <Button onClick={() => history.push('/search')}>Search Airbnb</Button>
+            <form  onSubmit={handleSubmit}>
+                <DateRangePicker 
+                ranges={[selectionRange]} 
+                onChange={handleSelect}
+                />
+                <h2>
+                    Number of guests
+                    <PeopleIcon/>
+                </h2>
+                <input min={1}
+                defaultValue={1}
+                max={3}
+                type="number"/>
+                <input type="submit" value="Search Airbnb"/>
+            </form>
         </div>
     )
 }

@@ -7,11 +7,10 @@ export const searchSlice = createSlice({
     initialState: {
         startDate: new Date(), 
         endDate: new Date(), 
-        guests: 1
+        guests: 0
     }, 
     reducers: {
         addStartDate: (state, action) => {
-            debugger
             state.startDate = action.payload; 
         }, 
 

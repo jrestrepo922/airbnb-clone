@@ -3,11 +3,23 @@ import "./Banner.css";
 import { Button } from "@material-ui/core";
 import Search from '../Search/Search';
 import { useHistory } from 'react-router-dom'; 
+import { useDispatch } from 'react-redux'; 
+import { addGuest } from '../Search/searchSlice'; 
+
+
 
 
 function Banner() {
     const history = useHistory(); 
+    const dispatch = useDispatch(); 
     const [showSearch, setShowSearch] = useState(false); 
+
+
+    function handleClickSearch(event){
+        dispatch(addGuest(0)); 
+        history.push("/search"); 
+    }
+    
 
     
     return (
@@ -28,7 +40,7 @@ function Banner() {
                         plan a different kind of getaway to uncover the hidden gems near you. 
                     </h5>
                     <Button variant="outlined"
-                    onClick={() => history.push("/search")}
+                    onClick={handleClickSearch}
                     >Explore Nearby</Button>
                 </div>
                 <div className="banner__imgContainer">
