@@ -32,6 +32,15 @@
     right: 40px;
 }
 
+.searchResult__heart-liked {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #FF385C;
+}
+
+
+
 .searchResult__infoTop {
     width: 40vw;
 }
@@ -54,7 +63,8 @@
 
 
 .searchResult__star {
-    color: red;
+    color: #FF385C;
+    transform: scale(.8);
 }
 
 
@@ -71,4 +81,8 @@
     position: absolute;
     bottom: 20px;
     right: 30px;
+}
+
+.searchResults__price span{
+    font-weight: normal;
 }
