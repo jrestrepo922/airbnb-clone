@@ -51,9 +51,9 @@ function SearchResult({
             <div className="searchResult__info">
                 <div className="searchResult__infoTop">
                     <p>{`Entire condominium in ${location}`}</p>
-                        <h3>{title}</h3>
-                        <p>_____</p>
-                        <p>{`${guests} guests·${bedrooms} bedrooms·${beds} beds·${baths} baths Pool · Kitchen · Air Conditioning · Wifi `}</p>
+                    <h3>{title}</h3>
+                    <p style={{color: "rgb(182, 182, 182)"}}>_____</p>
+                    <p>{`${guests} guests·${bedrooms} bedrooms·${beds} beds·${baths} baths Pool · Kitchen · Air Conditioning · Wifi `}</p>
                 </div>
                 <div className="searchResult__infoBottom">
                     <div className="searchResult__stars">
@@ -63,7 +63,7 @@ function SearchResult({
 
                     <div className="searchResults__price">
                         <h2>${pricePerDay} <span>/ night</span></h2>
-                        <p>{parseInt(searchGuests) ? `${pricePerDay * totalnights}`: ""}</p>
+                        <p>{parseInt(searchGuests) ? `$${pricePerDay * totalnights} total`: ""}</p>
                     </div>
                 </div>
             </div>

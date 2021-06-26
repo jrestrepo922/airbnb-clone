@@ -47,14 +47,22 @@
 
 .searchResult__infoTop > h3 {
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: -8px;
 }
 
+
 .searchResult__infoTop > p {
-    margin-top: 10px;
-    font-size: 13px;
+    font-size: 16px;
     color: gray;
-  }
+}
+
+
+.searchResult__infoTop p:last-child {
+    margin-top: 5px; 
+    width: 70%; 
+    line-height: 22px; 
+}
   
 .searchResult__infoBottom {
     display: flex;
@@ -85,4 +93,9 @@
 
 .searchResults__price span{
     font-weight: normal;
+}
+
+.searchResults__price p{
+    text-decoration: underline;
+    color:#808080; 
 }
