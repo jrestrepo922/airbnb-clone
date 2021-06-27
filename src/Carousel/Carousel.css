@@ -48,29 +48,32 @@
     justify-content: center;
 }
 
+.carousel__superHost{
+    background-color: #F2F9FE;
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    color:#3B3C3D;
+    border-radius: 2px;
+    padding: 4px;
+    bottom: 167px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 500;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .carousel__inner .left {
-    flex: 5%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .01);
 }
 
-.carousel__inner .right {
-    flex: 5%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .01);
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

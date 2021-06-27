@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux'; 
 import { selectSearchPage } from "../SearchPage/searchPageSlice"; 
 import Carousel from '../Carousel/Carousel';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -35,6 +36,7 @@ function SearchResult({
     let [liked, setLiked] = useState(resultIsLiked); 
 
     const dispatch = useDispatch(); 
+    const history = useHistory(); 
 
     function handleClick(event){
         dispatch(editHostIsLiked({id: id, isLiked: !resultIsLiked })); 
@@ -43,13 +45,18 @@ function SearchResult({
         
     }
 
+    function handleRedirect(event){
+        if(event.target.id !== "back" && event.target.id !== "next"){
+            history.push(`/search/${id}`)
+        }
+    }
 
 
     return (
         <div className="searchResult">
-            <Carousel stayImages={stayImages}/>
+            <Carousel stayImages={stayImages} superHost={superHost} id={id}/>
             {liked ? <FavoriteIcon className ="searchResult__heart-liked" onClick={handleClick}/> : <FavoriteBorderIcon className="searchResult__heart" onClick={handleClick}/>}
-            <div className="searchResult__info">
+            <div className="searchResult__info" onClick={handleRedirect}>
                 <div className="searchResult__infoTop">
                     <p>{`Entire condominium in ${location}`}</p>
                     <h3>{title}</h3>

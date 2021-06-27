@@ -40,7 +40,7 @@ class Host {
         "Images/Host1/host.jpg",
         "5.0",
         154, 
-        true
+        false
     ); 
 
     const host2 = new Host(
@@ -122,7 +122,7 @@ class Host {
         "Images/Host5/host.jpg",
         "5.0",
         271, 
-        true
+        false
     ); 
 
 
@@ -163,7 +163,7 @@ class Host {
         "Images/Host7/host.jpg",
         "4.81",
         225, 
-        true
+        false
     ); 
 
     

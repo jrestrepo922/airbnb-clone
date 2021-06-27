@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import "./Carousel.css";
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import { useHistory } from 'react-router-dom';
 
-function Carousel({stayImages}) {
+function Carousel({stayImages, superHost, id}) {
 
+    const history = useHistory(); 
     let [currImg, setCurrentImg] = useState(0); 
 
     function handleClickBack(event) {
@@ -25,14 +27,22 @@ function Carousel({stayImages}) {
         }
     }   
 
+    function handleRedirect(event){
+        if(event.target.id !== "back" && event.target.id !== "next"){
+            history.push(`/search/${id}`)
+        }
+    }
+
     return (
         <div className="carousel">
             <div 
                 className="carousel__inner"
                 style={{backgroundImage: `url(${stayImages[currImg]})`}}
+                onClick={handleRedirect}
             >
-                <div className="left" onClick={handleClickBack}><NavigateBeforeIcon/></div> 
-                <div className="right" onClick={handleClickNext}><NavigateNextIcon/></div>
+                {superHost && <div className="carousel__superHost">SUPERHOST</div>}
+                <div className="left" onClick={handleClickBack}><NavigateBeforeIcon id="back"/></div> 
+                <div className="right" onClick={handleClickNext}><NavigateNextIcon id="next"/></div>
                
                 
                
