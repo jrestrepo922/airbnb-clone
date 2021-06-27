@@ -7,6 +7,7 @@ import { editHostIsLiked } from '../SearchPage/searchPageSlice';
 import { useState } from 'react'; 
 import { useSelector } from 'react-redux'; 
 import { selectSearchPage } from "../SearchPage/searchPageSlice"; 
+import Carousel from '../Carousel/Carousel';
 
 
 
@@ -46,8 +47,8 @@ function SearchResult({
 
     return (
         <div className="searchResult">
-            <img src={stayImages[0]} alt="Interior of house"/>
-                {liked ? <FavoriteIcon className ="searchResult__heart-liked" onClick={handleClick}/> : <FavoriteBorderIcon className="searchResult__heart" onClick={handleClick}/>}
+            <Carousel stayImages={stayImages}/>
+            {liked ? <FavoriteIcon className ="searchResult__heart-liked" onClick={handleClick}/> : <FavoriteBorderIcon className="searchResult__heart" onClick={handleClick}/>}
             <div className="searchResult__info">
                 <div className="searchResult__infoTop">
                     <p>{`Entire condominium in ${location}`}</p>
@@ -74,3 +75,4 @@ function SearchResult({
 export default SearchResult
 
 
+// <img src={stayImages[0]} alt="Interior of house"/>
