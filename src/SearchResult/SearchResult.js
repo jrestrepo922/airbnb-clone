@@ -41,8 +41,7 @@ function SearchResult({
     function handleClick(event){
         dispatch(editHostIsLiked({id: id, isLiked: !resultIsLiked })); 
         resultIsLiked = !resultIsLiked; 
-        setLiked(resultIsLiked);
-        
+        setLiked(resultIsLiked);    
     }
 
     function handleRedirect(event){

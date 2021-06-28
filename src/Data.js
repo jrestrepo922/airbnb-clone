@@ -2,7 +2,7 @@
 
 
 class Host {
-    constructor(id, stayImages, title, guests, bedrooms, beds, description, hostPic, stars, pricePerDay, superHost ){
+    constructor(id, stayImages, title, guests, bedrooms, beds, description, hostPic, stars, pricePerDay, superHost, host ){
         this.id = id; 
         this.stayImages = stayImages; 
         this.location = "Panama City Beach, Florida, United States"; 
@@ -16,7 +16,8 @@ class Host {
         this.stars = stars; 
         this.pricePerDay = pricePerDay; 
         this.superHost = superHost; 
-        this.isLiked = false; 
+        this.isLiked = false;
+        this.host = host; 
     }
 }
 
@@ -40,7 +41,8 @@ class Host {
         "Images/Host1/host.jpg",
         "5.0",
         154, 
-        false
+        false, 
+        "Pedro"
     ); 
 
     const host2 = new Host(
@@ -60,7 +62,8 @@ class Host {
         "Images/Host2/host.jpg",
         "4.64",
         98, 
-        false
+        false,
+        "Paco"
     ); 
 
     const host3 = new Host(
@@ -80,7 +83,8 @@ class Host {
         "Images/Host3/host.jpg",
         "5.00",
         200, 
-        true
+        true,
+        "John"
     ); 
 
 
@@ -101,7 +105,8 @@ class Host {
         "Images/Host4/host.jpg",
         "4.81",
         144, 
-        false
+        false,
+        "Mary"
     ); 
 
 
@@ -122,7 +127,8 @@ class Host {
         "Images/Host5/host.jpg",
         "5.0",
         271, 
-        false
+        false,
+        "Chente"
     ); 
 
 
@@ -143,7 +149,8 @@ class Host {
         "Images/Host6/host.jpg",
         "4.92",
         253, 
-        true
+        true, 
+        "Checo"
     ); 
 
     const host7 = new Host(
@@ -163,7 +170,8 @@ class Host {
         "Images/Host7/host.jpg",
         "4.81",
         225, 
-        false
+        false, 
+        "Susan"
     ); 
 
     
@@ -184,7 +192,8 @@ class Host {
         "Images/Host8/host.jpg",
         "4.63",
         152, 
-        true
+        true,
+        "Cecilia"
     ); 
 
 
@@ -206,7 +215,8 @@ class Host {
         "Images/Host9/host.jpg",
         "4.8",
         300, 
-        false
+        false,
+        "Martin"
     ); 
     
     const data = [host1, host2, host3, host4, host5, host6, host7, host8, host9]
