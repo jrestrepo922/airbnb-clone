@@ -31,12 +31,17 @@ function StayDetails(props) {
     }
 
     const isSuperHost = (
-        <div className="stay__superContainer">
-            <WhatshotIcon/>
-            <h3>{host} is a Superhost </h3>
+        <div className="stay__superHostContainer">
+            <div className="stay__superHostInner">
+                <WhatshotIcon className="stay__hotIcon"/>
+                <h3>{host} is a Superhost </h3>
+            </div>
             <p>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests</p>
         </div>
+    )
 
+    const isSuperHostHeader = (
+        <span><WhatshotIcon/> superhost · </span>
     )
 
     return (
@@ -45,7 +50,7 @@ function StayDetails(props) {
             <div className="stay__reviewLocationShareLikeContainer">
                 <div className="stay__reviewLocationContainer">
                     <StarIcon className="stay__star"/>
-                    <p>{stars}   <span className="stay__reviewLocationContainerSpam1"> · </span> <span className="stay__reviewLocationContainerSpam2">{location}</span></p>
+                    <p>{stars}   <span className="stay__reviewLocationContainerSpam1"> · </span> {superHost? isSuperHostHeader: ""} <span className="stay__reviewLocationContainerSpam2">{location}</span></p>
                 </div>
                 <div className="stay__shareLikeContainer">
                     <DeckIcon className="stay__deck"/> 
@@ -84,7 +89,10 @@ function StayDetails(props) {
                             <h2>Entire condominium hosted by {host}</h2>
                             <p>{guests} {guests? "guests": "guest"} · {bedrooms} {bedrooms? "bedrooms": "bedroom"} ·  {beds} {beds? "beds": "bed"} · {baths} {baths? "baths": "bath"} </p>
                         </div>
-                        <img src={`../${hostPic}`} alt="host"/>
+                        <div className="stay__hostImg">
+                            <img src={`../${hostPic}`} alt="host"/>
+                        </div>
+                        
                     </div>
                     {superHost? isSuperHost: ""}
                     <div className="stay__info2">
