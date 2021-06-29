@@ -101,24 +101,29 @@ function StayDetails(props) {
                 </div>
                 <div className="stay__checkOutContainer">
                     <div className="stay__priceStars">
-                    <p> <span>$ {pricePerDay}</span>/ night</p>
-                    <div className="stay__reviewLocationContainer">
+                        <p> <span>$ {pricePerDay}</span>/ night</p>
+                        <div className="stay__reviewLocationContainer">
                             <StarIcon className="stay__star"/>
                             <p>{stars}</p>
                         </div>
                     </div>
                     <div className="stay__checkInCheckOutGuestContainer">
                         <div className="stay__checkInCheckOutContainer">
-                            <p>CHECK-IN</p>
+                            <h5>CHECK-IN</h5>
                             <p>{searchGuest ? formatedStarDate  : "Add date" }</p>
                         </div>
+                        <div className="stay__vl"></div>
                         <div className="stay__checkInCheckOutContainer">
-                            <p>CHECK-OUT</p>
+                            <h5>CHECK-OUT</h5>
                             <p>{searchGuest ? formatedEndDate  : "Add date" }</p>
                         </div>
                         <div className="stay__guestsContainer">
-                        <p> {searchGuest? " 1 guest " : `${searchGuest} guest`} </p>
-                        <ExpandMoreIcon/>
+                            <h5>guests</h5>
+                            <div className="stay__guestsContainerInnerContainer">
+                                <p> {searchGuest? " 1 guest " : `${searchGuest} guest`} </p>
+                                <ExpandMoreIcon className="stay__expandMoreIcon"/>
+                            </div>
+
                         </div>
                     </div>
                     <button>{searchGuest? "Reserve" : "Check availability"}</button>
