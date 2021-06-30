@@ -19,6 +19,23 @@
     align-items: center;
 }
 
+.stay__superHostHeaderContainer{
+    display: flex;
+    align-items: center;
+}
+
+.stay__superHostHeaderContainer span{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.stay__hotIconHeader{
+    transform: scale(.8);
+    color:#FF385C;
+    padding-right: 5px;
+    padding-left: 3px;
+}
+
 .stay__star{
     color: #FF385C;
     transform: scale(.8);
@@ -32,6 +49,7 @@
 
 .stay__reviewLocationContainerSpam1{
     color:#717171; 
+    padding-left: 5px;
 }
 
 .stay__reviewLocationContainerSpam2{
@@ -186,6 +204,9 @@
 
 
 
+
+/* Checkout styles */
+
 .stay__checkOutContainer{
     width: 900px;
     height: 227px;
@@ -280,9 +301,44 @@
     font-size: 15px;
 }
 
+/* Checkout styles avaliable dates and guests */
 
+.stay__totalContainer {
+    text-align: center;
+}
 
+.stay__totalContainer > p {
+    color: #707070;
+    padding: 15px 0; 
+}
 
+.stay__totalPriceContainer,
+.stay__cleaningFee,
+.stay__serviceFee,
+.stay__taxesFee,
+.stay__allFeesContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    color: #494949;
+}
+
+.stay__totalPriceContainer > p:first-child,
+.stay__cleaningFee > p:first-child,
+.stay__serviceFee > p:first-child,
+.stay__taxesFee > p:first-child{
+    text-decoration: underline;
+}
+
+.stay__taxesFee{
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding-bottom: 17px;
+}
+
+.stay__allFeesContainer{
+    padding-top: 15px;
+    font-weight: bold;
+}
 
 
 

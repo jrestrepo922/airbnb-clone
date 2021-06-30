@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './StayDetails.css'; 
 import { useSelector, useDispatch } from "react-redux"; 
 import { selectSearchPage } from "../SearchPage/searchPageSlice";
@@ -41,7 +41,53 @@ function StayDetails(props) {
     )
 
     const isSuperHostHeader = (
-        <span><WhatshotIcon/> superhost · </span>
+        <div className="stay__superHostHeaderContainer">
+            <WhatshotIcon className="stay__hotIconHeader"/>
+            <p > superhost   <span> ·</span> </p>
+        </div>
+
+    )
+
+    const totalnights = (endDate.getTime() - startDate.getTime()) / 86400000; 
+
+
+    useEffect(() => {
+        //eslint-disable-next-line 
+        if(searchGuest){
+            document.querySelector('.stay__checkOutContainer').style.height = "457px";  
+        } else {
+            document.querySelector('.stay__checkOutContainer').style.height = "227px";  
+        }
+
+        window.scrollTo(0, 0);
+    }, [])
+
+
+
+    const total = (
+        <div className="stay__totalContainer">
+            <p>You won't be Charge yet</p>
+            <div className="stay__totalPriceContainer">
+               <p> ${pricePerDay} X {totalnights} nights</p>
+               <p>${pricePerDay * totalnights}</p>
+            </div>
+            <div className="stay__cleaningFee">
+                <p>Cleaning fee</p>
+                <p>$200</p>
+            </div>
+            <div className="stay__serviceFee">
+                <p>Service fee</p>
+                <p>$333</p>
+            </div>
+            <div className="stay__taxesFee">
+                <p>Occupancy Taxes and fees</p>
+                <p>$165</p>
+            </div>
+            <div className="stay__allFeesContainer">
+                <p>Total</p>
+                <p>${698 + (pricePerDay * totalnights)}</p>
+            </div>
+        </div>
     )
 
     return (
@@ -50,7 +96,9 @@ function StayDetails(props) {
             <div className="stay__reviewLocationShareLikeContainer">
                 <div className="stay__reviewLocationContainer">
                     <StarIcon className="stay__star"/>
-                    <p>{stars}   <span className="stay__reviewLocationContainerSpam1"> · </span> {superHost? isSuperHostHeader: ""} <span className="stay__reviewLocationContainerSpam2">{location}</span></p>
+                    <p>{stars}   <span className="stay__reviewLocationContainerSpam1"> · </span></p>
+                    <p> {superHost? isSuperHostHeader: ""} </p>
+                    <p><span className="stay__reviewLocationContainerSpam2">{location}</span></p>
                 </div>
                 <div className="stay__shareLikeContainer">
                     <DeckIcon className="stay__deck"/> 
@@ -68,7 +116,7 @@ function StayDetails(props) {
                 <div className="stay__imgContainerLeft">
                     <img src={`../${stayImages[0]}`} alt="stay"/>
                 </div>
-                <div className="">
+                <div className="stay__imgContainerRight">
                     <div className="stay__imgContainerRight--top">
                         <img src={`../${stayImages[1]}`} alt="stay"/>
                         <img src={`../${stayImages[2]}`} alt="stay"/>
@@ -134,7 +182,9 @@ function StayDetails(props) {
 
                         </div>
                     </div>
+                    
                     <button>{searchGuest? "Reserve" : "Check availability"}</button>
+                    {searchGuest? total: ""}
                 </div>
              </div>
 

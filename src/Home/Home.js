@@ -2,10 +2,13 @@ import React from 'react';
 import './Home.css';
 import Banner from '../Banner/Banner'
 import Card from '../Card/Card'
-
+import hostMaker from '../Data';
 // ES7 snippets to do 'rfce'
 
 function Home() {
+
+    const hosts = hostMaker(); 
+
     return (
         <div className='home'>
             <Banner />
@@ -32,24 +35,27 @@ function Home() {
             </div>
             <div className='home__section'>
                 <Card
-                    src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
-                    title="3 Bedroom Flat in Bournemouth"
-                    description="Superhost with a stunning view of the beachside in Sunny Bournemouth"
-                    price="$130/night"
+                    id={0}
+                    src={hosts[0].stayImages[0]}
+                    title={hosts[0].title}
+                    description="Superhost with a stunning view of the beachside in Sunny Panama city Beach"
+                    price={`$${hosts[0].pricePerDay}/night`}
                     className="card__bottom"
                 />
                 <Card
-                    src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
-                    title="Penthouse in London"
-                    description="Enjoy the amazing sights of London with this stunning penthouse"
-                    price="$350/night"
+                    id={4}
+                    src={hosts[4].stayImages[0]}
+                    title={hosts[4].title}
+                    description="Enjoy the amazing sights of London with this stunning condo"
+                    price={`$${hosts[4].pricePerDay}/night`}
                     className="card__bottom"
                 />
                 <Card
-                    src="https://media.nomadicmatt.com/2018/apartment.jpg"
-                    title="1 Bedroom apartment"
+                    id={8}
+                    src={hosts[8].stayImages[0]}
+                    title={hosts[8].title}
                     description="Superhost with great amenities and a fabolous shopping complex nearby"
-                    price="$70/night"
+                    price={`$${hosts[4].pricePerDay}/night`}
                     className="card__bottom"
                 />
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DateRangePicker } from "react-date-range"; 
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
@@ -10,11 +10,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 
+
 //DATE PICKER COMPONENT 
 // to get the date picker component type npm i react-date-range
 function Search() {
-    // const [startDate, setStartDate] = useState(new Date()); 
-    // const [endDate, setEndDate] = useState(new Date()); 
+
     const history = useHistory(); 
     const dispatch = useDispatch(); 
 
@@ -28,8 +28,7 @@ function Search() {
     function handleSelect(ranges){
         dispatch(addStartDate(ranges.selection.startDate));
         dispatch(addEndDate(ranges.selection.endDate))
-        // setStartDate(ranges.selection.startDate); 
-        // setEndDate(ranges.selection.endDate); 
+
     }
 
     function handleSubmit(event){
@@ -37,6 +36,10 @@ function Search() {
         dispatch(addGuest(event.target.children[2].value))
         history.push("/search")
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <div className="search">

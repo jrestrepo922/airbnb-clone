@@ -1,15 +1,20 @@
 import React from 'react'; 
 import './Card.css'; 
+import { useHistory } from "react-router-dom"; 
 
 
 
-function Card({ src, title, description, price, url }) {
+function Card({ src, title, description, price, url, id }) {
+    const history = useHistory(); 
    
+    function handleClick(){
+        history.push(`/search/${id}`)
+    }
     
 
     return (
         
-        <div className="card"  >
+        <div className="card"  onClick={handleClick}>
                 <a href={url}>
                 <img src={src} alt="card img"/>
 

@@ -70,7 +70,7 @@ function SearchResult({
 
                     <div className="searchResults__price">
                         <h2>${pricePerDay} <span>/ night</span></h2>
-                        <p>{parseInt(searchGuests) ? `$${pricePerDay * totalnights} total`: ""}</p>
+                        <p>{parseInt(searchGuests) ? `$${698 + (pricePerDay * totalnights)} total`: ""}</p>
                     </div>
                 </div>
             </div>

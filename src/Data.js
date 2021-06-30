@@ -41,7 +41,7 @@ class Host {
         "Images/Host1/host.jpg",
         "5.0",
         154, 
-        false, 
+        true, 
         "Pedro"
     ); 
 
@@ -83,7 +83,7 @@ class Host {
         "Images/Host3/host.jpg",
         "5.00",
         200, 
-        true,
+        false,
         "John"
     ); 
 
@@ -102,7 +102,7 @@ class Host {
         1,
         2, 
         "Welcome to SeaScape with breathtaking penthouse views of the Sea as well as the city Scape! Recently updated with fresh paint, furnishings and a remodeled kitchen. This 21st, top floor unit will not disappoint! Private access to the beach is directly across the street! Come see for yourself why Trip Advisor has deemed Panama City Beach the top 10 Traveler's Choice, Best of the Best 2021.",
-        "Images/Host4/host.jpg",
+        "Images/Host8/host.jpg",
         "4.81",
         144, 
         false,
@@ -215,7 +215,7 @@ class Host {
         "Images/Host9/host.jpg",
         "4.8",
         300, 
-        false,
+        true,
         "Martin"
     ); 
     
