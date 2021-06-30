@@ -31,7 +31,7 @@
     border-radius: 999px;
 }
 
-.header__center > input {
+.header__center  > input {
     border: none; 
     width: 250px;
     outline-width: 0; 

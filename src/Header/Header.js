@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Header.css"
 import SearchIcon from '@material-ui/icons/Search';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -7,23 +7,22 @@ import LanguageIcon from '@material-ui/icons/Language';
 import { useHistory } from 'react-router-dom'; 
 import { useDispatch } from 'react-redux'; 
 import { addGuest } from '../Search/searchSlice'; 
+import Search from '../Search/Search'
 
 
 
 function Header() {
     const history = useHistory(); 
     const dispatch = useDispatch(); 
+    //adding search to header
+    const [showSearch, setShowSearch] = useState(false); 
 
     function handleClickHome(event){
         dispatch(addGuest(0)); 
         history.push("/"); 
     }
 
-    function handleClickSearch(event){
-        dispatch(addGuest(0)); 
-        history.push("/search"); 
-    }
-
+ 
 
     return (
         <div className="header">
@@ -35,14 +34,12 @@ function Header() {
                 onClick={handleClickHome}
             />
  
-            <div className="header__center"> 
-                <input type="text"/>
-                    <div  onClick={handleClickSearch}>
-                        <SearchIcon/> 
-                    </div>
-                    
-
-                
+            <div className="header__center" > 
+                <input type="text" placeholder="Start your Search" onClick={() => setShowSearch(!showSearch)}/>
+                <div onClick={() => setShowSearch(!showSearch)}>
+                    <SearchIcon /> 
+                </div>
+                {showSearch && <Search/>}
             </div>
             
 

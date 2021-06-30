@@ -1,6 +1,6 @@
 .search{
     position: absolute; 
-    top: 135px; 
+    top: 100px; 
     left: 50%; 
     transform: translateX(-50%);
     background-color: white;
@@ -12,21 +12,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 559px;
+    width: 548px;
     padding: 10px; 
     background-color: white;
     position: absolute; 
     left: 0; 
-    top: 380px; 
+    top: 360px; 
 }
 
 .search form > input[type="number"] {
     width:  539px; 
-    padding: 20px; 
+    padding: 15px; 
     position: absolute; 
     left: 0; 
-    height: 30px;
-    top: 420px; 
+    height: 20px;
+    top: 410px; 
     border: none; 
 }
 
@@ -38,7 +38,7 @@
 .search  form > input[type="submit"]{
     position: absolute;
     left: 0; 
-    top: 480px; 
+    top: 470px; 
     text-transform: inherit !important; 
     background-color: #ff7779;
     color: white; 
