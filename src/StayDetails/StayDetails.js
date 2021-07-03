@@ -48,7 +48,7 @@ function StayDetails(props) {
 
     )
 
-    const totalnights = (endDate.getTime() - startDate.getTime()) / 86400000; 
+    const totalnights = Math.ceil((endDate.getTime() - startDate.getTime()) / 86400000); 
 
 
     useEffect(() => {

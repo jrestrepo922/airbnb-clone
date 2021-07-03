@@ -27,6 +27,15 @@
     left: 5%;
 }
 
+.banner__info h1 {
+    font-size: 45px;
+}
+
+.banner__info h5 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
 
 .banner__imgContainer{
 
@@ -41,10 +50,7 @@
 
 }
 
-.banner__search{
-    display: flex;
-    flex-direction:column;
-}
+
 
 .banner__searchButton{ /*The import property is require on material-ui with class-names */
     background-color: white !important;
@@ -78,26 +84,38 @@
 }
 
 
-/* Vertical  Queries  */
-@media only screen and (max-height: 950px) {
+
+
+
+
+@media only screen and (max-width: 700px) {
     .banner__info{
-        padding-top: 10vh; 
-        
+
+        bottom: 20%;
+        left: 5%;
+        width: 40%;
     }
 
-
+    
 }
 
 
-/* Horizontal Queries */
-@media only screen and (max-height: 992px) {
+
+@media only screen and (max-width: 400px) {
+
     .banner__info{
-        padding-top: 20vh; 
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 30px;
+
+        bottom: 20%;
+        width: 70%;
     }
+
+
+
+    
+     .banner__info > h1 {
+         font-size: 30px;
+     }
+
+    
 }
-
-
 

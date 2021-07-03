@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { DateRangePicker } from "react-date-range"; 
+import { DateRange } from "react-date-range"; 
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import PeopleIcon from '@material-ui/icons/People';
-import "./Search.css"
+import "./SearchMin.css"
 import { useHistory  } from 'react-router-dom'; 
-import { addStartDate, addEndDate, addGuest, selectSearch } from './searchSlice'; 
+import { addStartDate, addEndDate, addGuest, selectSearch } from '../Search/searchSlice'; 
 import { useDispatch, useSelector } from 'react-redux'; 
 
 
@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 //DATE PICKER COMPONENT 
 // to get the date picker component type npm i react-date-range
-function Search(props) {
+function SearchMin(props) {
 
     const history = useHistory(); 
     const dispatch = useDispatch(); 
@@ -45,7 +45,7 @@ function Search(props) {
     return (
         <div className="search">
             <form  onSubmit={handleSubmit}>
-                <DateRangePicker 
+                <DateRange 
                 ranges={[selectionRange]} 
                 onChange={handleSelect}
                 />
@@ -63,4 +63,4 @@ function Search(props) {
     )
 }
 
-export default Search
+export default SearchMin

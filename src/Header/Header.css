@@ -41,8 +41,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15vw;
+    width: 20vw;
     margin-right: 80px;
+}
+
+@media only screen and (max-width: 700px) {
+    .header__icon{
+        display: none;
+    }
+
+    .header__right{
+        display: none;
+    }
+
+    .header__center{
+        margin: 20px auto;
+
+    }
+    
 }
 
 

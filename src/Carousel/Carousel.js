@@ -5,6 +5,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import { useHistory } from 'react-router-dom';
 
 function Carousel({stayImages, superHost, id}) {
+    
 
     const history = useHistory(); 
     let [currImg, setCurrentImg] = useState(0); 

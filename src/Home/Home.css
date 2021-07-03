@@ -1,5 +1,17 @@
+
 .home__section {
     display: flex; 
-    padding: 30px; 
+    padding: 30px;
+    cursor: pointer;
+
 }
+
+@media only screen and (max-width: 700px) {
+
+    .home__section{
+        display: block;
+    }
+}
+
+
 

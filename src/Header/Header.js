@@ -7,7 +7,8 @@ import LanguageIcon from '@material-ui/icons/Language';
 import { useHistory } from 'react-router-dom'; 
 import { useDispatch } from 'react-redux'; 
 import { addGuest } from '../Search/searchSlice'; 
-import Search from '../Search/Search'
+import Search from '../Search/Search';
+import SearchMin from '../SearchMin/SearchMin'
 
 
 
@@ -22,6 +23,11 @@ function Header() {
         history.push("/"); 
     }
 
+    function handleClick(){
+        debugger
+        setShowSearch(!showSearch);
+
+    }
  
 
     return (
@@ -39,7 +45,7 @@ function Header() {
                 <div onClick={() => setShowSearch(!showSearch)}>
                     <SearchIcon /> 
                 </div>
-                {showSearch && <Search/>}
+                {showSearch && <SearchMin onClick={handleClick}/>}
             </div>
             
 
