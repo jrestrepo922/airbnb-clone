@@ -27,8 +27,11 @@
     max-width: fit-content;
     padding : 10px; 
     height: 30px;
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     border-radius: 999px;
+    box-shadow: 5px 5px 22px -13px #000000;
+    
+
 }
 
 .header__center  > input {
@@ -45,19 +48,83 @@
     margin-right: 80px;
 }
 
+
+.headerBottom{
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    position: sticky; 
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    top: 86vh;
+    height: 80px;
+    border-top: 1px solid lightgray;
+
+
+}
+
+
+
+.headerBottom .header__icon{
+    /*This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible".
+    /* The image keeps its aspect ratio, but is resized to fit within the given dimension */
+    object-fit: contain;  
+    height: 50px;
+   
+    margin-left: 50px;
+
+}
+
+.headerBottom .header__centerBottom{
+
+    text-align: center;
+
+    font-size: 12px;
+    color: gray; 
+    width: 300px;
+
+}
+
+.headerBottom .header__right{
+    text-align: center;
+    display: block;
+    
+    font-size: 12px;
+    color: gray; 
+    margin-right: 60px;
+
+}
+
+
+
+
+
 @media only screen and (max-width: 700px) {
-    .header__icon{
+    .header .header__icon{
         display: none;
     }
 
-    .header__right{
+    .header .header__right{
         display: none;
     }
 
-    .header__center{
+    .header .header__center{
         margin: 20px auto;
 
+
     }
+
+    .header{
+        border: 1px solid rgb(206, 206, 206);
+    }
+
+    .headerBottom{
+        display: flex;
+    }
+
+
+    
     
 }
 

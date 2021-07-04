@@ -43,7 +43,7 @@ function SearchMin(props) {
     }, [])
 
     return (
-        <div className="search">
+        <div className="searchMin">
             <form  onSubmit={handleSubmit}>
                 <DateRange 
                 ranges={[selectionRange]} 
