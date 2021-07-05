@@ -23,7 +23,6 @@ function Header() {
     }
 
     function handleClick(){
-        debugger
         setShowSearch(!showSearch);
 
     }
@@ -55,13 +54,21 @@ function Header() {
     window.onscroll = function(ev) {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             document.querySelector(".headerBottom").style.display = "none";
-        } else{
+        } else {
             if(window.innerWidth <= 700){
                 document.querySelector(".headerBottom").style.display = "flex";
-            }
-            
+            } 
         }
     };
+
+    window.onresize = function() {
+        if(window.innerWidth <= 700){
+            document.querySelector(".headerBottom").style.display = "flex";
+        } else {
+            document.querySelector(".headerBottom").style.display = "none";
+        }
+    }
+
 
 
 

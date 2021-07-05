@@ -1,5 +1,4 @@
-.searchResult{
-    display: flex;
+.searchResultMin{
     position: relative;
     margin: 20px;
     padding: 20px;
@@ -9,28 +8,20 @@
 
 
 
-.searchResult > img{
-    height: 200px; 
-    width: 350px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-
-.searchResult__info {
+.searchResultMin .searchResult__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 20px;
 }
 
-.searchResult__heart {
+.searchResultMin .searchResult__heart {
     position: absolute;
     top: 20px;
     right: 40px;
 }
 
-.searchResult__heart-liked {
+.searchResultMin .searchResult__heart-liked {
     position: absolute;
     top: 20px;
     right: 40px;
@@ -39,61 +30,61 @@
 
 
 
-.searchResult__infoTop {
+.searchResultMin .searchResult__infoTop {
     width: 40vw;
 }
 
-.searchResult__infoTop > h3 {
+.searchResultMin .searchResult__infoTop > h3 {
     font-weight: 300;
     margin-top: 5px;
     margin-bottom: -8px;
 }
 
 
-.searchResult__infoTop > p {
+.searchResultMin .searchResult__infoTop > p {
     font-size: 16px;
     color: gray;
 }
 
 
-.searchResult__infoTop p:last-child {
+.searchResultMin .searchResult__infoTop p:last-child {
     margin-top: 5px; 
     width: 70%; 
     line-height: 22px; 
 }
   
-.searchResult__infoBottom {
+.searchResultMin .searchResult__infoBottom {
     display: flex;
     justify-content: space-between;
 }
 
 
-.searchResult__star {
+.searchResultMin .searchResult__star {
     color: #FF385C;
     transform: scale(.8);
 }
 
 
-.searchResult__stars {
+.searchResultMin .searchResult__stars {
     display: flex;
     align-items: center;
 }
 
-.searchResults__price > p {
+.searchResultMin .searchResults__price > p {
     text-align: right;
   }
 
-.searchResults__price {
+  .searchResultMin .searchResults__price {
     position: absolute;
     bottom: 20px;
     right: 30px;
 }
 
-.searchResults__price span{
+.searchResultMin .searchResults__price span{
     font-weight: normal;
 }
 
-.searchResults__price p{
+.searchResultMin .searchResults__price p{
     text-decoration: underline;
     color:#808080; 
 }
@@ -101,13 +92,13 @@
 
 
 @media only screen and (max-width: 850px) {
-    .searchResult__heart {
+    .searchResultMin .searchResult__heart {
 
 
         right: 0px;
     }
     
-    .searchResult__heart-liked {
+    .searchResultMin .searchResult__heart-liked {
         position: absolute;
 
         right: 0px;
@@ -115,3 +106,21 @@
     }
     
 }
+
+
+@media only screen and (max-width: 700px) {
+    .searchResultMin .searchResult__heart {
+
+
+        right: 0px;
+    }
+    
+    .searchResultMin .searchResult__heart-liked {
+        position: absolute;
+
+        right: 0px;
+
+    }
+    
+}
+
