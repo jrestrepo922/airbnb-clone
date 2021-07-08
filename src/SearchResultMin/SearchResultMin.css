@@ -1,47 +1,57 @@
 .searchResultMin{
     position: relative;
-    margin: 20px;
-    padding: 20px;
+    margin: 25px;
+    /* padding: 20px; */
     border-bottom: 1px solid lightgray;
     cursor: pointer; 
 }
 
-
-
-.searchResultMin .searchResult__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 20px;
+.searchResult__info{
+    padding-left: 0;
 }
+
 
 .searchResultMin .searchResult__heart {
     position: absolute;
-    top: 20px;
-    right: 40px;
+    top: 10px;
+    left: 94%;
+    color: rgb(228, 228, 228);
+    
 }
 
 .searchResultMin .searchResult__heart-liked {
     position: absolute;
-    top: 20px;
-    right: 40px;
+    top: 10px;
+    left: 94%;
     color: #FF385C;
 }
 
 
 
-.searchResultMin .searchResult__infoTop {
-    width: 40vw;
+
+.searchResultMin .searchResult__star {
+    color: #FF385C;
+    transform: scale(.8);
+
 }
 
-.searchResultMin .searchResult__infoTop > h3 {
+
+.searchResultMin .searchResult__stars {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.searchResultMin  h3 {
     font-weight: 300;
     margin-top: 5px;
     margin-bottom: -8px;
 }
 
 
-.searchResultMin .searchResult__infoTop > p {
+.searchResultMin  > p {
     font-size: 16px;
     color: gray;
 }
@@ -53,24 +63,12 @@
     line-height: 22px; 
 }
   
-.searchResultMin .searchResult__infoBottom {
-    display: flex;
-    justify-content: space-between;
-}
 
 
-.searchResultMin .searchResult__star {
-    color: #FF385C;
-    transform: scale(.8);
-}
 
 
-.searchResultMin .searchResult__stars {
-    display: flex;
-    align-items: center;
-}
 
-.searchResultMin .searchResults__price > p {
+.searchResultMin .searchResultsMin__price > p {
     text-align: right;
   }
 

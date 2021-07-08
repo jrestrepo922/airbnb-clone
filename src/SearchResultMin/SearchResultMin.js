@@ -52,22 +52,20 @@ function SearchResultMin({
             <Carousel stayImages={stayImages} superHost={superHost} id={id}/>
             {liked ? <FavoriteIcon className ="searchResult__heart-liked" onClick={handleClick}/> : <FavoriteBorderIcon className="searchResult__heart" onClick={handleClick}/>}
             <div className="searchResult__info" onClick={handleRedirect}>
-                <div className="searchResult__infoTop">
-                    <p>{`Entire condominium in ${location}`}</p>
-                    <h3>{title}</h3>
-                    
-                </div>
-                <div className="searchResult__infoBottom">
-                    <div className="searchResult__stars">
-                        <StarIcon className="searchResult__star"/>
-                        <p><strong>{stars}</strong></p>
-                    </div>
 
-                    <div className="searchResults__price">
-                        <h2>${pricePerDay} <span>/ night</span></h2>
-                        <p>{parseInt(searchGuests) ? `$${698 + (pricePerDay * Math.ceil(totalnights))} total`: ""}</p>
-                    </div>
+                <div className="searchResult__stars">
+                    <StarIcon className="searchResult__star"/>
+                    <p><strong>{stars}</strong></p>
                 </div>
+                <p>{`Entire condominium in ${location}`}</p>
+                <h3>{title}</h3>
+                    
+
+                <div className="searchResultsMin__price">
+                    <h2>${pricePerDay} <span>/ night</span></h2>
+                    <p>{parseInt(searchGuests) ? `$${698 + (pricePerDay * Math.ceil(totalnights))} total`: ""}</p>
+                </div>
+
             </div>
         </div>
     )

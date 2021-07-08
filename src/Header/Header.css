@@ -53,13 +53,15 @@
     display: none; 
     justify-content: center;
     align-items: center;
-    position: sticky; 
+    position: fixed; 
     background-color: white;
     z-index: 100;
     width: 100%;
-    top: 86vh;
-    height: 80px;
+    bottom: 0;
+    left: 0;
+    height: 60px;
     border-top: 1px solid lightgray;
+    padding: 10px 0;
 
 
 }
@@ -129,3 +131,15 @@
 }
 
 
+
+
+
+@media only screen and (max-height: 657px) {
+
+    .headerBottom{
+        top: 88%;
+    }
+
+    
+    
+}
