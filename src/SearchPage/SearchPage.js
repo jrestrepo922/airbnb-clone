@@ -6,6 +6,7 @@ import { selectSearch } from '../Search/searchSlice';
 import { useSelector } from 'react-redux'; 
 import { selectSearchPage } from './searchPageSlice'; 
 import SearchResultMin from '../SearchResultMin/SearchResultMin';
+import Media from 'react-media';
 
 
 function SearchPage() {
@@ -13,6 +14,7 @@ function SearchPage() {
     const {startDate, endDate } = useSelector(selectSearch);
     const searchGuests = parseInt(useSelector(selectSearch).guests);
 
+    
 
     function createSearchResults(){
         let filterData = data.filter((result) => {
@@ -94,7 +96,6 @@ function SearchPage() {
     const formatedStartDateArr = startDate.toString().split(" "); 
     const formatedEndDateArr = endDate.toString().split(" ");
 
-
     
     return (
         <div className="searchPage">
@@ -108,7 +109,18 @@ function SearchPage() {
                 <Button variant="outlined">Rooms and beds</Button>
                 <Button variant="outlined">More filters</Button>
             </div>
-           {searchResultsMin}
+            <Media queries={{
+                small: "(max-width: 700px)",
+                medium: "(min-width: 701px)",
+              }}>
+                {matches => (
+                  <React.Fragment>
+                    {matches.small && searchResultsMin}
+                    {matches.medium && searchResults}
+
+                  </React.Fragment>
+                )}
+              </Media>
         </div>
     )
 }

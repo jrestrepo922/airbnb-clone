@@ -2,53 +2,47 @@
     position: relative;
     margin: 25px;
     /* padding: 20px; */
-    border-bottom: 1px solid lightgray;
+    
     cursor: pointer; 
 }
 
-.searchResult__info{
+.searchResultMin__info{
     padding-left: 0;
 }
 
 
-.searchResultMin .searchResult__heart {
+.searchResultMin .searchResultMin__heart {
     position: absolute;
     top: 10px;
-    left: 94%;
+    left: 93.5%;
     color: rgb(228, 228, 228);
     
 }
 
-.searchResultMin .searchResult__heart-liked {
+.searchResultMin .searchResultMin__heart-liked {
     position: absolute;
     top: 10px;
-    left: 94%;
+    left: 93.5%;
     color: #FF385C;
 }
 
 
 
 
-.searchResultMin .searchResult__star {
+.searchResultMin .searchResultMin__star {
     color: #FF385C;
     transform: scale(.8);
 
 }
 
 
-.searchResultMin .searchResult__stars {
+.searchResultMin .searchResultMin__stars {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 
-
-
-.searchResultMin  h3 {
-    font-weight: 300;
-    margin-top: 5px;
-    margin-bottom: -8px;
-}
 
 
 .searchResultMin  > p {
@@ -57,68 +51,32 @@
 }
 
 
-.searchResultMin .searchResult__infoTop p:last-child {
-    margin-top: 5px; 
-    width: 70%; 
-    line-height: 22px; 
-}
+
   
 
 
 
 
-
-.searchResultMin .searchResultsMin__price > p {
-    text-align: right;
-  }
-
-  .searchResultMin .searchResults__price {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
-}
-
-.searchResultMin .searchResults__price span{
+.searchResultMin .searchResultsMin__price span{
     font-weight: normal;
 }
 
-.searchResultMin .searchResults__price p{
+.searchResultMin .searchResultsMin__price p{
     text-decoration: underline;
     color:#808080; 
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 
 
-@media only screen and (max-width: 850px) {
-    .searchResultMin .searchResult__heart {
-
-
-        right: 0px;
+@media only screen and (max-width: 500px) {
+    .searchResultMin .searchResultMin__heart{
+        left: 90.5%;
     }
-    
-    .searchResultMin .searchResult__heart-liked {
-        position: absolute;
 
-        right: 0px;
-
-    }
-    
-}
-
-
-@media only screen and (max-width: 700px) {
-    .searchResultMin .searchResult__heart {
-
-
-        right: 0px;
-    }
-    
-    .searchResultMin .searchResult__heart-liked {
-        position: absolute;
-
-        right: 0px;
-
-    }
-    
+    .searchResultMin .searchResultMin__heart-liked{
+        left: 90.5%;
+    } 
 }
 
