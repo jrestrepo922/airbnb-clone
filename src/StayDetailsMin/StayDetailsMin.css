@@ -82,62 +82,12 @@
 
 /* Stay Images */
 .stay__imgOuterContainer{
-    display: flex;
     width: 100%;
     height: 52vh;
     margin-bottom: 50px;
 }
 
-.stay__imgContainerLeft img{
-    width: 97.5%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-right: 10px;
-}
 
-.stay__imgContainerRight{
-    width: 100%;
-    height: 100%;
-    
-}
-
-.stay__imgContainerRight--top{
-    display: flex;
-    width: 100%;
-    height: 50%;
-    
-}
-
-.stay__imgContainerRight--top img{
-    width: 48.2%;
-    height: 96.6%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.stay__imgContainerRight--top img:last-child{
-    margin-left: 10px;
-    border-top-right-radius: 10px;
-}
-
-.stay__imgContainerRight--bottom{
-    display: flex;
-    width: 100%;
-    height: 50%;
-}
-
-.stay__imgContainerRight--bottom img{
-    width: 48.2%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.stay__imgContainerRight--bottom img:last-child{
-    margin-left: 10px;
-    border-bottom-right-radius: 10px;
-}
 
 
 

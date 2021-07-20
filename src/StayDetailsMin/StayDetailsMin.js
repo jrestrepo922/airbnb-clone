@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './StayDetails.css'; 
+import './StayDetailsMin.css'; 
 import { useSelector, useDispatch } from "react-redux"; 
 import { selectSearchPage } from "../SearchPage/searchPageSlice";
 import StarIcon from '@material-ui/icons/Star';
@@ -10,10 +10,11 @@ import { editHostIsLiked } from '../SearchPage/searchPageSlice';
 import { selectSearch } from "../Search/searchSlice"; 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
+import Carousel  from '../Carousel/Carousel';
 
 
 
-function StayDetails(props) {
+function StayDetailsMin(props) {
     let {id, stayImages, location, title, guests, bedrooms, baths, beds, description, hostPic, stars, pricePerDay, superHost, isLiked, host} = useSelector(selectSearchPage).host[props.match.params.id]
     let { startDate, endDate } = useSelector(selectSearch); 
 
@@ -113,21 +114,7 @@ function StayDetails(props) {
 
 
             <div className="stay__imgOuterContainer">
-                <div className="stay__imgContainerLeft">
-                    <img src={`../${stayImages[0]}`} alt="stay"/>
-                </div>
-                <div className="stay__imgContainerRight">
-                    <div className="stay__imgContainerRight--top">
-                        <img src={`../${stayImages[1]}`} alt="stay"/>
-                        <img src={`../${stayImages[2]}`} alt="stay"/>
-                    </div>
-
-                    <div className="stay__imgContainerRight--bottom">
-                        <img src={`../${stayImages[3]}`} alt="stay"/>
-                        <img src={`../${stayImages[4]}`} alt="stay"/>
-                    </div>
-
-                </div>
+                <Carousel stayImages={stayImages} superHost={superHost} id={id}/>
             </div>
 
             <div className="stay_detailInfoContainer">
@@ -194,7 +181,7 @@ function StayDetails(props) {
     )
 }
 
-export default StayDetails
+export default StayDetailsMin
 
 
 // {props.match.params.id}

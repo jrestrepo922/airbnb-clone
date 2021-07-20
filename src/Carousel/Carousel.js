@@ -5,7 +5,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import { useHistory } from 'react-router-dom';
 
 function Carousel({stayImages, superHost, id}) {
-    
+
 
     const history = useHistory(); 
     let [currImg, setCurrentImg] = useState(0); 
@@ -38,7 +38,7 @@ function Carousel({stayImages, superHost, id}) {
         <div className="carousel">
             <div 
                 className="carousel__inner"
-                style={{backgroundImage: `url(${stayImages[currImg]})`}}
+                style={{backgroundImage: `url(http://localhost:3000/${stayImages[currImg]})`}}
                 onClick={handleRedirect}
             >
                 {superHost && <div className="carousel__superHost">SUPERHOST</div>}
