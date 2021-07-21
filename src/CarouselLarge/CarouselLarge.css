@@ -1,0 +1,67 @@
+.carouselLarge{
+    width: 100vw;
+    height: 60vw;
+    
+}
+
+
+
+
+.carouselLarge__inner {
+    height: 100%;
+    width: 100%; 
+
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+
+
+.carouselLarge__inner .left {
+    position: absolute;
+    width: 30px; 
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    bottom: 50%;
+    transform: translateY(50%);
+    /* left: 10px;  */
+    left: 3.5%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.carouselLarge__inner .right {
+    position: absolute;
+    width: 30px; 
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    bottom: 50%;
+    transform: translateY(50%);
+    /* left: 310px; */
+    left: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

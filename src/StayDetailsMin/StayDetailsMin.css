@@ -1,144 +1,155 @@
-.stay__container{
-    width: 60%; 
+.stayMin__container{
+    width: 100%;  
     margin: 0 auto;
-    min-width: 1100px;
-    height: 1300px;
-
+    
 }
 
-.stay__reviewLocationShareLikeContainer{
+.stayMin__innerContainer{
+    width: 93%;  
+    margin: 0 auto;
+    
+}
+
+.stayMin__innerContainer > h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.stayMin__reviewLocationShareLikeContainer{
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 10px;
 
+
+
+
 }
 
-.stay__reviewLocationContainer{
+.stayMin__reviewLocationContainer{
     display: flex;
     align-items: center;
 }
 
-.stay__superHostHeaderContainer{
+.stayMin__superHostHeaderContainer{
     display: flex;
     align-items: center;
 }
 
-.stay__superHostHeaderContainer span{
+.stayMin__superHostHeaderContainer span{
     padding-left: 5px;
     padding-right: 10px;
 }
 
-.stay__hotIconHeader{
+.stayMin__hotIconHeader{
     transform: scale(.8);
     color:#FF385C;
     padding-right: 5px;
     padding-left: 3px;
 }
 
-.stay__star{
+.stayMin__star{
     color: #FF385C;
     transform: scale(.8);
 }
 
-.stay__shareLikeContainer{
+.stayMin__shareLikeContainer{
     display: flex;
     align-items: center;
 
 }
 
-.stay__reviewLocationContainerSpam1{
+.stayMin__reviewLocationContainerSpam1{
     color:#717171; 
     padding-left: 5px;
 }
 
-.stay__reviewLocationContainerSpam2{
+.stayMin__reviewLocationContainerSpam2{
   color:#3E3E3E; 
-  text-decoration: underline;   
+  text-decoration: underline;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding-bottom: 25px; 
+  display: block;  
+  margin-top: -5px;
 }
 
-.stay__deck, .stay__liked, .stay__notLiked {
+.stayMin__deck, .stayMin__liked, .stayMin__notLiked {
     transform: scale(.8);
 }
 
 
-.stay__deck, .stay__notLiked, .stay__shareLikeContainer > p {
+.stayMin__deck, .stayMin__notLiked, .stayMin__shareLikeContainer > p {
     color: #3E3E3E;
     text-decoration: underline;
     
 
 }
 
-.stay__liked{
+.stayMin__liked{
    color: #FF385C; 
 }
 
-.stay__shareLikeContainer > p{
+.stayMin__shareLikeContainer > p{
     margin-right: 10px;
     margin-left: 3px;
 }
 
 
 
-/* Stay Images */
-.stay__imgOuterContainer{
+
+
+
+
+
+.stayMin__detailInfoContainer{
+
     width: 100%;
-    height: 52vh;
-    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
-
-
-
-
-.stay_detailInfoContainer{
-    display: flex;
-    width: 100%;
-}
-
-.stay__detailInfo{
+/* .stayMin__detailInfo{
   
     margin-right: 80px;
     width: 1746px;
-}
+} */
 
-.stay__info1{
+.stayMin__info1{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(218, 218, 218);
     padding-bottom: 25px;
 }
 
-.stay__infoInner h2{
+.stayMin__infoInner h2{
     font-weight: 600;
     padding-bottom: 5px;
 }
 
-.stay__hostImg{
+.stayMin__hostImg{
     width: 60px;
     height: 60px; 
     min-width: 60px;
 }
 
-.stay__info1 img{
+.stayMin__info1 img{
     border-radius: 50%;
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.stay__info2{
+.stayMin__info2{
     padding-top: 30px;
     border-bottom: 1px solid rgb(218, 218, 218);
     padding-bottom: 30px;
 }
 
-.stay__info2 ul li:last-child{
+.stayMin__info2 ul li:last-child{
     padding-top: 6px;
     
 }
 
-.stay_info3{
+.stayMin__info3{
     padding-top: 30px;
     border-bottom: 1px solid rgb(218, 218, 218);
     padding-bottom: 30px;
@@ -146,7 +157,7 @@
 
 
 
-.stay_info3 > h2 {
+.stayMin_info3 > h2 {
     margin-bottom: 25px;
 }
 
@@ -158,32 +169,30 @@
 
 /* Checkout styles */
 
-.stay__checkOutContainer{
-    width: 900px;
+.stayMin__checkOutContainer{
     height: 227px;
     padding: 24px; 
     border-radius: 10px;
     border: 1px solid rgb(219, 219, 219);
     box-shadow: 0px 0px 20px -13px #000000;
-    min-width: 309px
 }
 
-.stay__priceStars{
+.stayMin__priceStars{
     display: flex; 
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.stay__priceStars > p {
+.stayMin__priceStars > p {
     font-size: 22px;
 }
 
 
-.stay__priceStars span{ 
+.stayMin__priceStars span{ 
     font-weight: bold;
 }
 
-.stay__checkInCheckOutGuestContainer{
+.stayMin__checkInCheckOutGuestContainer{
     display: flex;
     border-radius: 10px;
     border: 1px solid rgb(185, 185, 185);
@@ -194,7 +203,7 @@
 
 
 
-.stay__checkInCheckOutContainer{
+.stayMin__checkInCheckOutContainer{
     width: 46.84%;
     border-bottom: 1px solid rgb(185, 185, 185);
     padding-top: 8px;
@@ -203,22 +212,22 @@
 
 }
 
-.stay__checkInCheckOutContainer > h5 {
+.stayMin__checkInCheckOutContainer > h5 {
     font-size: 10px;
     margin-bottom: 3px;
 }
 
-.stay__checkInCheckOutContainer > p {
+.stayMin__checkInCheckOutContainer > p {
     color: #8A8A8A; 
 }
 
-.stay__vl{
+.stayMin__vl{
     height: 50px;
     border-left: 1px solid rgb(185, 185, 185); 
 }
 
 
-.stay__guestsContainer{
+.stayMin__guestsContainer{
     width: 100%; 
     padding-left: 3%;
     padding-top: 8px;
@@ -226,23 +235,23 @@
     padding-right: 3%;
 }
 
-.stay__guestsContainerInnerContainer{
+.stayMin__guestsContainerInnerContainer{
     display: flex;
     margin-top: 2px;
     justify-content: space-between;
     align-items: center;
 }
 
-.stay__guestsContainerInnerContainer > p{
+.stayMin__guestsContainerInnerContainer > p{
     color: #8A8A8A; 
 }
 
-.stay__expandMoreIcon{
+.stayMin__expandMoreIcon{
     transform: scale(1.4);
     color: #303030; 
 }
 
-.stay__checkOutContainer button{
+.stayMin__checkOutContainer button{
     width: 100%;
     padding: 16px;
     border-radius: 10px;
@@ -255,39 +264,39 @@
 
 /* Checkout styles avaliable dates and guests */
 
-.stay__totalContainer {
+.stayMin__totalContainer {
     text-align: center;
 }
 
-.stay__totalContainer > p {
+.stayMin__totalContainer > p {
     color: #707070;
     padding: 15px 0; 
 }
 
-.stay__totalPriceContainer,
-.stay__cleaningFee,
-.stay__serviceFee,
-.stay__taxesFee,
-.stay__allFeesContainer{
+.stayMin__totalPriceContainer,
+.stayMin__cleaningFee,
+.stayMin__serviceFee,
+.stayMin__taxesFee,
+.stayMin__allFeesContainer{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
     color: #494949;
 }
 
-.stay__totalPriceContainer > p:first-child,
-.stay__cleaningFee > p:first-child,
-.stay__serviceFee > p:first-child,
-.stay__taxesFee > p:first-child{
+.stayMin__totalPriceContainer > p:first-child,
+.stayMin__cleaningFee > p:first-child,
+.stayMin__serviceFee > p:first-child,
+.stayMin__taxesFee > p:first-child{
     text-decoration: underline;
 }
 
-.stay__taxesFee{
+.stayMin__taxesFee{
     border-bottom: 1px solid rgb(216, 216, 216);
     padding-bottom: 17px;
 }
 
-.stay__allFeesContainer{
+.stayMin__allFeesContainer{
     padding-top: 15px;
     font-weight: bold;
 }
@@ -300,23 +309,23 @@
 
 
 
-.stay__superHostContainer{
+.stayMin__superHostContainer{
     border-bottom: 1px solid rgb(185, 185, 185);
     padding-bottom: 30px;
 }
 
 
-.stay__superHostInner{
+.stayMin__superHostInner{
     display: flex; 
     margin-top: 30px;
 }
 
-.stay__hotIcon{
+.stayMin__hotIcon{
     margin-right: 15px;
     color: #616161;
 }
 
-.stay__superHostContainer > p{
+.stayMin__superHostContainer > p{
     padding-top: 10px;
     padding-left: 38px;
     color: #8A8A8A;
@@ -324,30 +333,20 @@
 
 
 
-@media only screen and (max-width: 1200px) {
-    .stay__container{
-        min-width: 650px;
-        width: 90%;
-        
-    }
-
-
-
-}
 
 
 @media only screen and (max-width: 1000px) {
 
-    .stay__checkOutContainer{
+    .stayMin__checkOutContainer{
        min-width: 209px
     }
     
     
-    .stay__checkInCheckOutContainer{
+    .stayMin__checkInCheckOutContainer{
         width: 46.5%;
     }
 
-    .stay__reviewLocationContainer{
+    .stayMin__reviewLocationContainer{
         font-size: 14px;
     }
 }
@@ -355,7 +354,7 @@
 
 @media only screen and (max-width: 800px) {
 
-    .stay__reviewLocationContainer{
+    .stayMin__reviewLocationContainer{
         font-size: 14px;
     }
 }
