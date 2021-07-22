@@ -1,5 +1,5 @@
 .carouselLarge{
-    width: 100vw;
+    width: 96.5vw;
     height: 60vw;
     
 }
@@ -45,12 +45,24 @@
     bottom: 50%;
     transform: translateY(50%);
     /* left: 310px; */
-    left: 92%;
+    left: 89%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+@media only screen and (max-width: 400px) {
+    .carouselLarge{
+        width: 100vw;
+        height: 60vw;
+    }
+
+    .carouselLarge__inner .right {
+        left: 87.5%;
+
+    }
+}
 
 
 
