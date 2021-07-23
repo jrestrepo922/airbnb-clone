@@ -1,10 +1,12 @@
 import React from 'react';
 import Media from 'react-media';
-import StayDetailsMin from './StayDetailsMin/StayDetailsMin';
-import StayDetails from './StayDetails/StayDetails';
+import StayDetailsMin from '../StayDetailsMin/StayDetailsMin';
+import StayDetails from '../StayDetails/StayDetails';
 
-function StayDetailsContainer() {
+function StayDetailsContainer(props) {
+
     return (
+        
         <div>
             <Media queries={{
                 small: "(max-width: 700px)",
@@ -12,8 +14,8 @@ function StayDetailsContainer() {
                 }}>
                 {matches => (
                     <React.Fragment>
-                    {matches.small && StayDetailsMin}
-                    {matches.medium && StayDetails}
+                    {matches.small && <StayDetailsMin id={props.match.params.id}/>}
+                    {matches.medium && <StayDetails id={props.match.params.id}/>}
                     </React.Fragment>
                 )}
             </Media>

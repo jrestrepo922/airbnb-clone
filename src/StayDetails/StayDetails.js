@@ -14,7 +14,7 @@ import WhatshotIcon from '@material-ui/icons/Whatshot';
 
 
 function StayDetails(props) {
-    let {id, stayImages, location, title, guests, bedrooms, baths, beds, description, hostPic, stars, pricePerDay, superHost, isLiked, host} = useSelector(selectSearchPage).host[props.match.params.id]
+    let {id, stayImages, location, title, guests, bedrooms, baths, beds, description, hostPic, stars, pricePerDay, superHost, isLiked, host} = useSelector(selectSearchPage).host[props.id]
     let { startDate, endDate } = useSelector(selectSearch); 
 
     let searchGuest = useSelector(selectSearch).guests; 
